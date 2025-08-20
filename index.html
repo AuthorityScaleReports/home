@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Authority Scale — Report Console</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Prevent indexing -->
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#10B981" />
+  <style>
+    :root{
+      --bg:#0B0F14; --paper:#0F141B; --border:#1F2937;
+      --text:#E5E7EB; --muted:#9CA3AF; --accent:#22D3EE;
+      --em-st:#10B981; --em-md:#059669; --em-end:#047857;
+      --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35); --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 15% -10%, rgba(16,185,129,.14), transparent 60%),
+        radial-gradient(1200px 800px at 85% 110%, rgba(5,150,105,.12), transparent 60%),
+        var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      letter-spacing:.1px;
+    }
+    .container{max-width:var(--maxw); margin:0 auto; padding:32px 16px}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:8px 0 16px}
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text)}
+    .logo{display:grid; place-items:center; width:36px; height:36px; border-radius:12px;
+      background:linear-gradient(135deg, var(--em-st), var(--em-md) 55%, var(--em-end)); box-shadow:var(--shadow)}
+    .brand h1{font-size:16px; margin:0; font-weight:700; letter-spacing:.4px}
+    .actions{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{display:inline-grid; place-items:center; padding:12px 18px; border-radius:999px;
+      border:1px solid transparent; background:linear-gradient(135deg, var(--em-st), var(--em-md) 60%, var(--em-end));
+      color:white; text-decoration:none; font-weight:650; box-shadow:var(--shadow)}
+    .btn:hover{filter:brightness(1.05)}
+    .btn.secondary{background:transparent; border-color:var(--border); color:var(--text)}
+    .hero{display:grid; gap:28px; padding:64px 0 40px}
+    .eyebrow{display:inline-block; padding:6px 12px; border-radius:999px; border:1px solid var(--border);
+      color:var(--muted); font-size:12px; letter-spacing:.5px; text-transform:uppercase}
+    .headline{font-size:42px; line-height:1.08; margin:0; font-weight:800; letter-spacing:.2px}
+    .headline .grad{background:linear-gradient(135deg, var(--em-st), var(--em-md) 50%, var(--em-end));
+      -webkit-background-clip:text; background-clip:text; color:transparent}
+    .sub{color:var(--muted); font-size:18px; line-height:1.6; max-width:780px}
+    .panel{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      border:1px solid var(--border); border-radius:18px; padding:24px; box-shadow:var(--shadow)}
+    .panel h3{margin:0 0 10px 0; font-size:16px; font-weight:700}
+    .kicker{color:var(--muted); font-size:14px}
+    .grid{display:grid; gap:16px; grid-template-columns:repeat(12, 1fr)}
+    .col-8{grid-column:span 8} .col-4{grid-column:span 4}
+    @media(max-width:960px){ .col-8, .col-4{grid-column:1/-1} .headline{font-size:34px} }
+    .callouts{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .callout{border:1px solid var(--border); border-radius:14px; padding:16px}
+    .callout h4{margin:0 0 8px 0; font-size:14px}
+    .callout p{margin:0; color:var(--muted); font-size:14px; line-height:1.5}
+    @media(max-width:960px){ .callouts{grid-template-columns:1fr} }
+    .input{display:flex; align-items:center; gap:8px; border:1px solid var(--border);
+      border-radius:999px; padding:10px 12px; background-color:rgba(255,255,255,.02)}
+    .input input{background:transparent; border:0; outline:0; color:var(--text); width:100%}
+    .footer{margin-top:72px; padding-top:24px; border-top:1px solid var(--border); color:var(--muted); font-size:14px}
+    .footer a{color:inherit; text-decoration:none; border-bottom:1px dotted var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="#">
+        <span class="logo" aria-hidden="true">AS</span>
+        <h1>Authority Scale™</h1>
+      </a>
+      <div class="actions">
+        <a class="btn secondary" href="#purpose">Purpose</a>
+        <a class="btn" href="#start">Start a Report</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <span class="eyebrow">Report Console</span>
+      <h2 class="headline">The place where <span class="grad">Authority Scale reports begin</span>.</h2>
+      <p class="sub">This microsite explains the purpose of our reporting function and serves as the starting point for organizing new report workstreams. Reports themselves are produced and delivered through our standard channels.</p>
+      <div class="actions">
+        <a class="btn" href="#purpose">What this page is</a>
+        <a class="btn secondary" href="#start">Start a Report</a>
+      </div>
+    </header>
+
+    <section id="purpose" class="grid" aria-label="Purpose">
+      <div class="col-8">
+        <div class="panel">
+          <h3>Purpose</h3>
+          <p class="kicker">One page. One job. Set the stage for Authority Scale reports.</p>
+          <p>Use this console to capture the essentials: scope, inputs, timing, and points of contact. From here, work proceeds through the established delivery paths you already use with our team.</p>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="panel" id="start">
+          <h3>Start a Report</h3>
+          <div class="input" style="margin:10px 0 12px 0">
+            <input type="text" placeholder="Project or client name" aria-label="project name" />
+            <a class="btn" href="#">Begin</a>
+          </div>
+          <p class="kicker">You can begin with a working title and refine details as you go.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn" style="margin-top:22px" aria-label="How it works">
+      <div class="callouts">
+        <div class="callout">
+          <h4>I. Origination</h4>
+          <p>Capture the brief — purpose, outcomes, and cadence — so everyone is aligned from minute one.</p>
+        </div>
+        <div class="callout">
+          <h4>II. Curation</h4>
+          <p>Gather inputs and notes in one place to streamline analysis and production.</p>
+        </div>
+        <div class="callout">
+          <h4>III. Delivery</h4>
+          <p>Reports are produced and shared via your usual delivery method with the team.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+        <div>
+          <strong>Authority Scale™</strong> — Authority systems for inevitable leaders.
+        </div>
+        <div style="opacity:.9">
+          <a href="#">entry@authorityscale.com</a>
+        </div>
+      </div>
+      <div style="margin-top:8px; display:flex; gap:14px; flex-wrap:wrap; opacity:.8">
+        <span>© 2025 Authority Scale™</span>
+        <span>Built for clients and partners.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
